@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="ballidaku.wlkullu">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.MANAGE_DOCUMENTS"/>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_new"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".frontScreens.SplashActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".frontScreens.BaseActivity"/>
+        <activity
+            android:name=".mainScreens.activities.MainActivity"
+            android:label=""
+            android:screenOrientation="landscape"/>
+        <activity
+            android:name=".mainScreens.activities.DetailActivity"
+            android:label=""
+            android:windowSoftInputMode="adjustPan"/>
+        <activity
+            android:name=".mainScreens.activities.GalleryImages"
+            android:label=""/>
+
+        <!--
+        <receiver android:name="sunmi.ds.MsgReceiver">
+            <intent-filter>
+                <action android:name="com.sunmi.hcservice"/>
+                <action android:name="com.sunmi.hcservice.status"/>
+            </intent-filter>
+        </receiver>
+
+
+        <receiver android:name=".ShutDownBroadcastRecevier">
+            <intent-filter android:priority="1000">
+                <action android:name="com.sunmi.action_shutdown_client" />
+            </intent-filter>
+        </receiver>
+        -->
+
+        <activity
+            android:name=".mainScreens.activities.VideoActivity"
+            android:label="">
+        </activity>
+        <activity android:name=".mainScreens.activities.ChildActivity"
+            android:label="">
+        </activity>
+    </application>
+
+</manifest>
